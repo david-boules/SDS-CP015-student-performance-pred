@@ -11,9 +11,11 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import pickle
+import os
 
-with open('model.pkl', 'rb') as file:
-  model = pickle.load(file)
+import os
+with open(os.path.join(os.path.dirname(__file__), 'model.pkl'), 'rb') as file:
+    model = pickle.load(file)
 
 st.title("Student Performance Predictor")
 
